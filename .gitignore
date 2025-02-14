@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+__pycache__/
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+*.cover
+*.py,cover
+coverage.xml
+nosetests.xml
+test_*.xml
+*.coveragerc
+*.hypothesis/
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# PyInstaller
+#  Often includes a `dist` folder with executables
+#  To avoid committing these, add them to .gitignore
+#  You can also ignore `.spec` files
+*.spec
+dist/
+build/
+
+# VS Code, JetBrains, Sublime Text, etc.
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
