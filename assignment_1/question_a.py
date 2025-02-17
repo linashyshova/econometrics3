@@ -72,8 +72,19 @@ def main():
     }, index=["Intercept"] + x_vars)
 
     print(results)
+    print("\\textbf{This is bold text in LaTeX:} $y = \\beta X + \\epsilon$")
     print(f"R-squared = {R2:.4f}")
     print(f"Estimated between regression variance = {sigma2_alpha:.4f}")
+    
+    latex_output = results.style.to_latex()
+    
+    # Output Latex table
+    with open("between_estimation_results.tex", "w") as f:
+        f.write("\\begin{table}[h]\\centering\n")
+        f.write(latex_output + "\n")
+        f.write("\\caption{Between Estimation Results}\n")
+        f.write("\\label{tab:between_estimation}\n")
+        f.write("\\end{table}\n")
     
 ###########################################################
 ### call main
