@@ -72,7 +72,6 @@ def main():
     }, index=["Intercept"] + x_vars)
 
     print(results)
-    print("\\textbf{This is bold text in LaTeX:} $y = \\beta X + \\epsilon$")
     print(f"R-squared = {R2:.4f}")
     print(f"Estimated between regression variance = {sigma2_alpha:.4f}")
     
