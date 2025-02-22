@@ -15,7 +15,7 @@ import pandas as pd
 
 # global variables
 y_var = "lwage"
-x_vars = ["exp", "wks", "bluecol", "ind", "south", "smsa", "married", "gender", "union", "edu", "colour"]
+x_vars = ["exp", "wks", "bluecol", "ind", "south", "smsa", "married", "union"]
 
 ###########################################################
 
@@ -60,8 +60,7 @@ def main():
 
 
     y = data[y_var].to_numpy()
-    X = np.column_stack((np.ones(len(y)), data[x_vars].to_numpy()))  # Add constant for intercept
-
+    X = data[x_vars].to_numpy()
 
     beta_W, t_values, se_W, R2, sigma2_heta = within_regression(y,X)
     
@@ -70,7 +69,7 @@ def main():
     "Coefficient": beta_W,
     "Std Error": se_W,
     "t-Statistic": t_values
-    }, index=["Intercept"] + x_vars)
+    }, index=x_vars)
 
     print(results)
     print(f"R-squared = {R2:.4f}")
