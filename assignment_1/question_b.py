@@ -73,7 +73,7 @@ def main():
 
     print(results)
     print(f"R-squared = {R2:.4f}")
-    print(f"Estimated between regression variance = {sigma2_heta:.4f}")
+    print(f"Estimated σ2_η= {sigma2_heta:.4f}")
     
     latex_output = results.style.to_latex()
     

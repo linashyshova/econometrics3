@@ -74,7 +74,7 @@ def main():
 
     print(results)
     print(f"R-squared = {R2:.4f}")
-    print(f"Estimated between regression variance = {sigma2_alpha:.4f}")
+    print(f"Estimated σ2_α  = {sigma2_alpha:.4f}")
     
     latex_output = results.style.to_latex()
     
