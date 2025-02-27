@@ -5,7 +5,7 @@ Purpose: Carry out the within estimation and report the estimates, including sta
 but also the coefficient of determination R2and your estimate of sigma_heta^2
     
 Date:
-    17 February 2025  
+    27 February 2025  
 '''
 
 ###########################################################
@@ -69,7 +69,7 @@ def main():
     "Coefficient": beta_W,
     "Std Error": se_W,
     "t-Statistic": t_values
-    }, index=x_vars)
+    },  x_vars) 
 
     print(results)
     print(f"R-squared = {R2:.4f}")

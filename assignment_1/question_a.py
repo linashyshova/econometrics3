@@ -5,7 +5,7 @@ Purpose: Carry out the between estimation and report the estimates, including st
 but also the coefficient of determination R2 and the estimate of sigma_a^2
     
 Date:
-    17 February 2025  
+    27 February 2025  
 '''
 
 ###########################################################
@@ -35,7 +35,8 @@ def between_regression(y, X , N=595, T=7):
     
     # Compute residuals
     a_i = y_bar - X_bar @ beta_B
-    sigma2_alpha = (1 / (N  - X.shape[1])) * np.sum(a_i**2)
+    #sigma2_alpha = (1 / (N  - X.shape[1])) * np.sum(a_i**2)
+    sigma2_alpha = np.sum(a_i**2) / (N - X.shape[1])
     
     # Compute standard errors
     s2_B = sigma2_alpha
